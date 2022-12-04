@@ -1,0 +1,23 @@
+{
+  "name": "bc-ch-sql_employee_data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ajaws2022/BC-CH-SQL_Employee_Data.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ajaws2022/BC-CH-SQL_Employee_Data/issues"
+  },
+  "homepage": "https://github.com/Ajaws2022/BC-CH-SQL_Employee_Data#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
+}
