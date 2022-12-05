@@ -16,7 +16,7 @@ const db = mysql.createConnection(
 );
 
 const dataOptions = async () => {
-    let answers = await inquirer
+    const userOptions = await inquirer
      .prompt([
         { 
             type: 'list',
@@ -26,5 +26,27 @@ const dataOptions = async () => {
         },
         
      ])
+    //  setup if statement to filter next prompt based on choice
+    if(userOptions.choice === 'View Employees'){
+        console.log('view employees')
+    } 
+    else if (userOptions.choice === 'Add Employee'){
+        console.log('add employee')
+    }
+    else if (userOptions.choice === 'Update Role'){
+        console.log('Update Role')
+    }
+    else if (userOptions.choice === 'View Roles'){
+        console.log('View Roles')
+    }
+    else if (userOptions.choice === 'Add Role'){
+        console.log('Add Role')
+    }
+    else if (userOptions.choice === 'View Departments'){
+        console.log('View Departments')
+    }
+    else if (userOptions.choice === 'Add Department'){
+        console.log('Add Department')
+    }
 };
 
