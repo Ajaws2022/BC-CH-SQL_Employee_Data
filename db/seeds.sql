@@ -1,8 +1,8 @@
 INSERT INTO department(id, names)
 VALUES (1, 'Sales'),
-       (2, 'Accounting')
-       (3, 'Marketing')
-       (4, 'Customer_Service')
+       (2, 'Accounting'),
+       (3, 'Marketing'),
+       (4, 'Customer_Service'),
        (5, 'Legal');
 
 
@@ -19,15 +19,15 @@ VALUES (1, 'Sales_Manager', 150000, 1),
        (10, 'Lawyer', 100000, 5);
 
 INSERT INTO employees(id, first_name, last_name, role_id, manager_id)
-VALUES (1, 'John', 'Doe', 1),
+VALUES (1, 'John', 'Doe', 1, NULL),
        (2, 'Bill', 'Baker', 2, 1),
-       (3, 'Kevin', 'Nguyen', 3),
+       (3, 'Kevin', 'Nguyen', 3, NULL),
        (4, 'Trisha', 'Johnson', 4, 3),
-       (5, 'Henry', 'Patel', 5),
+       (5, 'Henry', 'Patel', 5, NULL),
        (6, 'Chance', 'Estrada', 6, 5),
-       (7, 'Susie', 'Usman', 7),
+       (7, 'Susie', 'Usman', 7, NULL),
        (8, 'Gracie', 'Rodriguez', 8, 7),
-       (9, 'Tom', 'Platz', 9),
+       (9, 'Tom', 'Platz', 9, NULL),
        (10, 'Leticia', 'Wallace', 10, 9);
 
 
