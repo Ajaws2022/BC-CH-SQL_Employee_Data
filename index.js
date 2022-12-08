@@ -48,5 +48,9 @@ const dataOptions = async () => {
     else if (userOptions.choice === 'Add Department'){
         console.log('Add Department')
     }
+    else{
+        console.log('Goodbye')
+        prompt.ui.close();
+    }
 };
 
