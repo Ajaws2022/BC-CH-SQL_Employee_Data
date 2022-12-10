@@ -2,6 +2,15 @@ const inquirer = require('inquirer');
 
 const mysql = require('mysql2');
 
+const Employee = require('./lib/empBuilder');
+const empOptions = new Employee();
+
+const Role = require('./lib/roleBuiler');
+const roleOptions = new Role();
+
+const Department = require('./lib/deptBuilder');
+const deptOptions = new Department();
+
 // create a generic "What would you like to do?" question with options
 const db = mysql.createConnection(
     {
@@ -28,25 +37,32 @@ const dataOptions = async () => {
      ])
     //  setup if statement to filter next prompt based on choice
     if(userOptions.choice === 'View Employees'){
-        console.log('view employees')
+        console.log('view employees');
+        empOptions.showEmp();
     } 
     else if (userOptions.choice === 'Add Employee'){
-        console.log('add employee')
+        console.log('add employee');
+        empOptions.empQuestions();
     }
     else if (userOptions.choice === 'Update Role'){
-        console.log('Update Role')
+        console.log('Update Role');
+        
     }
     else if (userOptions.choice === 'View Roles'){
-        console.log('View Roles')
+        console.log('View Roles');
+        roleOptions.showRoles();
     }
     else if (userOptions.choice === 'Add Role'){
-        console.log('Add Role')
+        console.log('Add Role');
+        roleOptions.roleQuestions();
     }
     else if (userOptions.choice === 'View Departments'){
-        console.log('View Departments')
+        console.log('View Departments');
+        deptOptions.showDept();
     }
     else if (userOptions.choice === 'Add Department'){
-        console.log('Add Department')
+        console.log('Add Department');
+        deptOptions.deptQuestions();
     }
     else{
         console.log('Goodbye')
@@ -54,3 +70,4 @@ const dataOptions = async () => {
     }
 };
 
+dataOptions();
