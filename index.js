@@ -39,6 +39,7 @@ const dataOptions = async () => {
     if(userOptions.choice === 'View Employees'){
         console.log('view employees');
         empOptions.showEmp();
+        return dataOptions()
     } 
     else if (userOptions.choice === 'Add Employee'){
         console.log('add employee');
@@ -46,6 +47,7 @@ const dataOptions = async () => {
     }
     else if (userOptions.choice === 'Update Role'){
         console.log('Update Role');
+        roleOptions.roleUpdate();
         
     }
     else if (userOptions.choice === 'View Roles'){
