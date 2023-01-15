@@ -24,7 +24,7 @@ const db = mysql.createConnection(
     console.log(`Connected to the employee_db database.`)
 );
 function exit () {
-    prompt.ui.close();
+    inquirer.prompt.close();
 }
 const dataOptions = async () => {
     const userOptions = await inquirer
@@ -84,51 +84,10 @@ const dataOptions = async () => {
             exit()
         }
      })
-    //  setup if statement to filter next prompt based on choice
-    // if(userOptions.choice === 'View Employees'){
-    //     // console.log('view employees');
-    //     // empOptions.createManagers();
-    //     await empOptions.showEmp();
-    //     return dataOptions()
-    // } 
-    // else if (userOptions.choice === 'Add Employee'){
-    //     // console.log('add employee');
-    //     await empOptions.empQuestions();
-    //     return dataOptions();
-    // }
-    // else if (userOptions.choice === 'Update Role'){
-    //     // console.log('Update Role');
-    //     await roleOptions.roleUpdate();
-    //     return dataOptions();
-        
-    // }
-    // else if (userOptions.choice === 'View Roles'){
-    //     // console.log('View Roles');
-    //     roleOptions.showRoles();
-    //     return dataOptions();
-    // }
-    // else if (userOptions.choice === 'Add Role'){
-    //     // console.log('Add Role');
-    //     await roleOptions.roleQuestions();
-    //     return dataOptions();
-    // }
-    // else if (userOptions.choice === 'View Departments'){
-    //     // console.log('View Departments');
-    //     deptOptions.showDept();
-    //     return dataOptions();
-    // }
-    // else if (userOptions.choice === 'Add Department'){
-    //     // console.log('Add Department');
-    //     await deptOptions.deptQuestions();
-    //     return dataOptions();
-    // }
-    // else{
-    //     console.log('Goodbye')
-    //     prompt.ui.close();
-    // }
+    
 };
 
 dataOptions();
 
 
-// module.exports = dataOptions();
+
